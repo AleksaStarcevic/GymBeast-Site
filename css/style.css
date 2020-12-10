@@ -1,0 +1,398 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+.current {
+  border-bottom: 2px solid #66fcf1;
+}
+
+
+/* Nav */
+nav {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid rgb(194, 193, 193);
+  z-index: 1;
+}
+
+nav img {
+  width: 80px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  padding-right: 1rem;
+}
+
+nav ul li a {
+  color: black;
+
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid #66fcf1;
+}
+
+
+/* Landing */
+
+#landing {
+  height: 90vh;
+  background: url("../img/proba2.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#landing .desc {
+  text-align: center;
+}
+
+#landing .desc p {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+#landing .btn {
+  border: 2px solid #66fcf1;
+
+  color: #fff;
+  display: inline-block;
+  padding: 1rem;
+}
+
+#landing .btn:hover {
+  background-color: black;
+  transition: .5s;
+}
+
+/* Desc */
+#gym {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+#gym .box {
+  text-align: center;
+
+}
+
+#gym .box h2 {
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+#gym img {
+  width: 70%;
+  border-radius: 2px;
+}
+
+#gym img:hover {
+  opacity: 0.9;
+
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: #fff;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer img {
+  width: 60px;
+}
+
+footer .copy {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+}
+
+footer .social {
+  font-size: 1.8rem;
+  margin-left: 4rem;
+
+}
+
+footer .social i:hover {
+  color: #66fcf1;
+}
+
+/* Gallery */
+
+#gallery {
+  background-color: #0B0C10;
+}
+
+#gallery .gallery-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 5rem 0;
+}
+
+#gallery .gallery-img {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+#gallery .gallery-img img {
+  width: 100%;
+  /* Da ne izadje iz kontejnera */
+  background-size: cover;
+}
+
+
+
+
+
+/* Shop */
+
+#landing-shop {
+  height: 80vh;
+  background: url('../img/shop-backg.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+}
+
+#landing-shop h1 {
+  padding-top: 5rem;
+  font-size: 3rem;
+}
+
+#products {
+  min-height: 700px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  justify-content: stretch;
+  /* Razvukli preko celog box-a */
+  grid-gap: 1rem 0.7rem;
+  margin: 1.5rem 0.5rem;
+
+
+}
+
+#products img {
+  max-width: 300px;
+  height: 200px;
+}
+
+#products .box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  text-align: center;
+  padding-top: 1rem;
+  position: relative;
+
+}
+
+#products .box:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+#products .box h3 {
+  margin-bottom: 1.5rem;
+}
+
+.btn2 {
+  color: black;
+  border: 1px solid #66fcf1;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  margin-top: 1.4rem;
+}
+
+.btn2:hover {
+  background-color: black;
+  transition: .6s;
+  color: white;
+}
+
+#products img:hover {
+  transform: scale(1.1);
+  transition: transform .3s;
+}
+
+
+
+
+/* Prices */
+#price {
+  min-height: 90vh;
+  background-color: #0B0C10;
+  display: flex;
+  justify-content: center;
+  /* DA IMA RAMZAK IZMEDJU SLIKE I KARTICA */
+  align-items: center;
+}
+
+
+#price .container {
+  display: grid;
+  grid-gap: 1.3rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#price .container .card {
+  border: 2px solid #66fcf1;
+  background-color: #0B0C10;
+  color: whitesmoke;
+  height: 400px;
+  width: 300px;
+  text-align: center;
+}
+
+#price .container .card:nth-child(2) {
+  transform: scaleY(1.1);
+}
+
+#price .container .card:hover {
+  box-shadow: 4px 4px #66fcf1;
+  transition: 0.3s;
+}
+
+
+
+#price .container .card h2 {
+  margin: 1.5rem 0;
+}
+
+
+#price .container .card h2:nth-child(2) {
+  display: inline-block;
+  border: 2px solid #66fcf1;
+  border-radius: 50%;
+  padding: 1.5rem;
+}
+
+#price .container .card ul li {
+  padding: 0.4rem 0;
+}
+
+
+/* Map */
+#mapid {
+  height: 400px;
+  width: 700px;
+}
+
+/* Contact */
+
+#contact {
+  background-color: #0B0C10;
+  color: #fff;
+  min-height: 90vh;
+
+}
+
+#contact h1 {
+  font-size: 3rem;
+  padding: 4rem 0;
+  text-align: center;
+
+}
+
+#contact .contact-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+
+#contact .contact-content .contact-icons {
+  display: flex;
+  margin-top: 1rem;
+}
+
+#contact .contact-content .contact-icons i {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+#contact .training h2,
+#contact .training p {
+  margin-bottom: 2rem;
+}
+
+#contact .training form {
+  width: 320px;
+  margin: auto;
+
+}
+
+#contact .training input {
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  width: 20rem;
+  border: 2px solid #66fcf1;
+  position: relative;
+
+}
+
+#contact input[type="submit"] {
+  color: black;
+  border: 2px solid #66fcf1;
+  width: 30%;
+}
+
+#contact input[type="submit"]:hover {
+  background-color: black;
+  transition: .6s;
+  color: white;
+}
+
+#contact #time {
+  padding-bottom: 0.8rem;
+}
+
+/* Form Validation */
+.error {
+  border: 2px solid rgb(218, 14, 14) !important;
+
+}
+
+.success {
+  border: 2px solid rgb(42, 228, 42) !important;
+}
+
+#time {
+  color: white;
+}

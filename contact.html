@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Hero | Contact</title>
+  <link href="css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" media="screen and (max-width:1024px)" href="/css/mobile.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Castoro&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon (1).ico">
+  <!-- Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin="">
+    </script>
+
+</head>
+
+
+<body>
+  <!-- Nav -->
+  <nav>
+    <a class="logo" href="index.html"><img src="/img/beast.png" alt="Logo"></a>
+
+    <ul>
+      <li><a href="index.html">Pocetna</a></li>
+      <li><a href="gallery.html">Galerija</a></li>
+      <li><a href="price.html">Cenovnik</a></li>
+      <li><a href="shop.html">Prodavnica</a></li>
+      <li><a class="current" href="contact.html">Kontakt</a></li>
+    </ul>
+
+  </nav>
+
+
+  <section id="contact">
+    <h1>Kontakt</h1>
+    <div class="contact-content">
+      <div class="training">
+        <h2>Zakazi besplatan probni trening</h2>
+        <p>Bez ikakvih obaveza, dodji da se upoznamo i da ti pokazemo kako izgleda biti clan naseg kluba.</p>
+
+        <form id="form">
+          <input id="name" type="text" name="Name" id="name" placeholder="Ime i prezime*">
+          <input id="email" type="email" name="Email" id="email" placeholder="Email*">
+          <input id="number" type="number" name="Number" id="number" placeholder="Telefon*">
+          <input id="date" type="date" name="Date" id="date">
+          <small id="time"></small>
+          <input id="submit" type="submit" value="ZAKAZI">
+        </form>
+      </div>
+
+      <div class="map">
+        <div id="mapid"></div>
+        <div class="contact-icons">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Bulevar kralja Aleksandra 228, Beograd</p>
+        </div>
+
+        <div class="contact-icons">
+          <i class="fas fa-envelope"></i>
+          <p>gymbeast@gmail.com</p>
+        </div>
+
+
+        <div class="contact-icons">
+          <i class="fas fa-phone-alt"></i>
+          <p>011 12345</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer>
+    <div class="copy">
+      <img src="/img/beast-white.png" alt="Logo">
+      <p>Copyright &copy; GymBeast 2020.</p>
+    </div>
+
+    <div class="social">
+      <a href="http://instagram.com" target="_blank"><i class="fab  fa-instagram"></i></a>
+      <a href="http://facebook.com" target="_blank"><i class="fab  fa-facebook-f"></i></a>
+      <a href="http://youtube.com" target="_blank"><i class="fab  fa-youtube"></i></a>
+      <a href="http://twitter.com" target="_blank"><i class="fab  fa-twitter"></i></a>
+    </div>
+  </footer>
+
+
+
+
+  <script>
+    var mymap = L.map('mapid').setView([44.794756, 20.500983], 15);
+    var marker = L.marker([44.794756, 20.500983]).addTo(mymap);
+
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1IjoiYWxla3NhNiIsImEiOiJja2k5OWxpamcwZGVzMnpsYjg5MWRqMnNsIn0.4Kt4PYt4rDkKi3uZolvOyA'
+    }).addTo(mymap);
+  </script>
+  <script src="/js/script.js"></script>
+
+</body>
+
+</html>

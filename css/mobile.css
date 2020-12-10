@@ -1,0 +1,144 @@
+/* IPAD PRO */
+
+#gallery .gallery-img {
+ grid-template-columns: repeat(2, 1fr);
+}
+
+#gallery .gallery-img {
+ padding: 0 1rem;
+}
+
+#contact #mapid {
+ width: 100%;
+
+}
+
+#contact .map {
+ margin-bottom: 2rem;
+}
+
+#contact h1 {
+ padding: 2rem 0;
+}
+
+#contact .training {
+ margin-bottom: 2rem;
+}
+
+
+/* Ipad */
+
+@media(max-width:768px) {
+
+
+ #gym {
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+ }
+
+
+ #products {
+  grid-template-columns: repeat(2, 1fr);
+ }
+
+ #products img {
+  height: 100px;
+ }
+
+ #price .container {
+
+  grid-template-columns: 1fr;
+ }
+
+ #price .container {
+  padding: 1.5rem 0;
+
+ }
+
+ #price .container .card {
+  margin-bottom: 1rem;
+ }
+
+ #contact .training h2 {
+  text-align: center;
+ }
+
+ #contact .training p,
+ #contact .training form small {
+  display: none;
+ }
+
+ #contact .training {
+  margin-right: 1rem;
+ }
+
+ #contact .map {
+  margin-bottom: 1rem;
+ }
+
+
+}
+
+/* Mobile */
+@media(max-width:550px) {
+ nav {
+  position: static;
+
+ }
+
+ #landing .desc p {
+  font-size: 2rem;
+ }
+
+ nav {
+  flex-direction: column;
+  align-items: center;
+
+ }
+
+ nav ul {
+  flex-direction: column;
+  align-items: center;
+ }
+
+ nav img {
+  margin-top: 0.5rem;
+
+ }
+
+ nav ul li {
+  padding-top: 0.8rem;
+ }
+
+ nav ul li:last-child {
+  margin-bottom: 0.8rem;
+ }
+
+ footer {
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+ }
+
+ #gallery .gallery-img {
+  grid-template-columns: 1fr;
+ }
+
+
+ #gallery .gallery-container {
+  padding: 1rem 0;
+ }
+
+ #products {
+  grid-template-columns: 1fr;
+ }
+
+ #products .box {
+  height: 220px;
+ }
+
+ #landing-shop h1 {
+  font-size: 2.5rem;
+ }
+
+}
